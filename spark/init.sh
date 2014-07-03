@@ -18,6 +18,7 @@ then
   git remote add origin $repo
   git fetch origin
   git checkout $git_hash
+  export SPARK_GANGLIA_LGPL=true
   sbt/sbt clean assembly
   sbt/sbt publish-local
   popd
