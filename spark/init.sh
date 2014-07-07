@@ -21,7 +21,7 @@ then
   export SPARK_GANGLIA_LGPL=true
   sbt/sbt clean assembly
   sbt/sbt publish-local
-  sed -i -e 's/##HOST/$MASTERS/g' /root/spark/conf/metrics.properties
+  sed -i -e "s/##HOST/$MASTERS/g" /root/spark/conf/metrics.properties
   popd
 
 # Pre-packaged spark version:
